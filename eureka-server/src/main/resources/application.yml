@@ -1,0 +1,14 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    service-url:  #eureka地址信息，为eureka集群使用
+      defaultZone: http://localhost:10086/eureka
+    # 注册中心不需要检索自己
+    fetch-registry: false
+    # 更不需要向注册中心注册自己 不一定 集群时需要
+#    register-with-eureka: false
